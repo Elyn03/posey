@@ -20,10 +20,10 @@ function gotPoses(poses) {
       console.log("right")
       console.log("leftWrist : ", pose.leftWrist.x, ",", pose.leftWrist.y, "| rightWrist : ", pose.rightWrist.x, ",", pose.rightWrist.y);
       
-      if (pose.leftWrist.x < 450){
-         body.style.backgroundColor = "red";
+      if (pose.leftWrist.x > 300 && pose.leftWrist.y < 300 && pose.rightWrist.x < 300 && pose.rightWrist.y > 300){
+         body.style.backgroundColor = "#97c78a";
       } else {
-         body.style.backgroundColor = "#F1AA9D";
+         body.style.backgroundColor = "#c78a8a";
       }   
    }
 }
@@ -35,12 +35,8 @@ function draw() {
    image(video, 0, 0);
 
    if (pose) {
-      fill(255, 0, 0);
-      ellipse(pose.nose.x, pose.nose.y, 64);
-
       fill(23, 30, 20);
-      ellipse(pose.leftWrist.x, pose.leftWrist.y, 64);
-      ellipse(pose.rightWrist.x, pose.rightWrist.y, 64);
+      ellipse(pose.leftWrist.x, pose.leftWrist.y, 32);
    }
    
    
