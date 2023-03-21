@@ -23,19 +23,19 @@ function draw() {
   strokeWeight(5);
   rect(50, 50, 300, 300, 150);
 
-    //The Eyes
-    fill(255);
-    stroke(0);
-    rect(100, 150, 50, 50, 50);
-    rect(250, 150, 50, 50, 50);
-  
-  
-    //The Eye Balls
-    fill(0);
-    rect(eyeX, eyeY, 10, 10, 10);
-    rect(eyeX2, eyeY2, 10, 10, 10);
+  //The Eyes
+  fill(255);
+  stroke(0);
+  rect(100, 150, 50, 50, 50);
+  rect(250, 150, 50, 50, 50);
 
-    //The Mouth
+
+  //The Eye Balls
+  fill(0);
+  rect(eyeX, eyeY, 10, 10, 10);
+  rect(eyeX2, eyeY2, 10, 10, 10);
+
+  //The Mouth
   fill(255);
   rect(150, 250, 100, 70, 0, 0, 50, 50);
   rect(190, 190, 20, 20, 50, 50, 50, 50);
