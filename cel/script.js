@@ -17,13 +17,18 @@ function gotPoses(poses) {
    console.log(poses);
    if (poses.length > 0) {
       pose = poses[0].pose;
-      console.log("right")
-      console.log("leftWrist : ", pose.leftWrist.x, ",", pose.leftWrist.y, "| rightWrist : ", pose.rightWrist.x, ",", pose.rightWrist.y);
-      
-      if (pose.leftWrist.x > 300 && pose.leftWrist.y < 300 && pose.rightWrist.x < 300 && pose.rightWrist.y > 300){
+
+      if (200 < pose.rightShoulder.x && pose.rightShoulder.x < 400 && 100 < pose.leftShoulder.y && pose.leftShoulder.y < 300){
+         body.style.backgroundColor = "#b57777";
+      } else if  (pose.nose.x > 500 && pose.nose.y > 400){
+         body.style.backgroundColor = "#d0ac4d";
+      } else if (pose.leftWrist.x > 300 && pose.leftWrist.y < 300 &&
+         pose.rightWrist.x < 300 && pose.rightWrist.y < 300 &&
+         pose.rightAnkle.x < 320 && pose.rightAnkle.x > 240 
+         ){
          body.style.backgroundColor = "#97c78a";
       } else {
-         body.style.backgroundColor = "#c78a8a";
+         body.style.backgroundColor = "#000";
       }   
    }
 }
@@ -35,8 +40,8 @@ function draw() {
    image(video, 0, 0);
 
    if (pose) {
-      fill(23, 30, 20);
-      ellipse(pose.leftWrist.x, pose.leftWrist.y, 32);
+      fill(255, 0, 0);
+      ellipse(pose.rightAnkle.x, pose.rightAnkle.y, 32);
    }
    
    
