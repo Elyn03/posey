@@ -19,16 +19,16 @@ function gotPoses(poses) {
       pose = poses[0].pose;
 
       if (200 < pose.rightShoulder.x && pose.rightShoulder.x < 400 && 100 < pose.leftShoulder.y && pose.leftShoulder.y < 300){
-         body.style.backgroundColor = "#b57777";
+         body.style.backgroundImage = "url('rose.jpg')";
       } else if  (pose.nose.x > 500 && pose.nose.y > 400){
-         body.style.backgroundColor = "#d0ac4d";
+         body.style.backgroundImage = "url('jaune.jpg')";
       } else if (pose.leftWrist.x > 300 && pose.leftWrist.y < 300 &&
          pose.rightWrist.x < 300 && pose.rightWrist.y < 300 &&
          pose.rightAnkle.x < 320 && pose.rightAnkle.x > 240 
          ){
-         body.style.backgroundColor = "#97c78a";
+            body.style.backgroundImage = "url('vert.jpg')";
       } else {
-         body.style.backgroundColor = "#000";
+         body.style.backgroundImage = "url('noir.jpg')";
       }   
    }
 }
