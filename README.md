@@ -6,3 +6,5 @@ As part of the "Devlab - Project Creative Dev" courses, we had a mission to crea
 - the first one where we have to do 3 "poses"
 - the second one where we can see our skeleton
 - and the last one we created a face with eyes that follow us when we move our mouse
+
+you can test these projects right here: https://elyn03.github.io/posey/
